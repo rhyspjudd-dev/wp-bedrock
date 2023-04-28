@@ -7,6 +7,9 @@ web/app/uploads/*
 !web/app/uploads/.gitkeep
 web/app/cache/*
 
+# Node Mdules
+/node_modules
+
 # WordPress
 web/wp
 web/.htaccess
