@@ -1,0 +1,12 @@
+{
+    "name": "acf/left-right",
+    "title": "left-right",
+    "description": "left-right",
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["left-right"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "template/left-media-right-text.php"
+    }
+}
