@@ -1,6 +1,6 @@
 {
     "key": "group_644b64b67ea7e",
-    "title": "ACF Block: Full Width Text",
+    "title": "ACF Block: Some Block",
     "fields": [
         {
             "key": "field_644b64b699f9c",
@@ -28,7 +28,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": ""
+                "value": "acf\/some-block"
             }
         ]
     ],
@@ -41,5 +41,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1682662699
+    "modified": 1682935554
 }

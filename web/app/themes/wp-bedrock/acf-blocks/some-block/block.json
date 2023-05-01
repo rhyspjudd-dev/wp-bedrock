@@ -1,0 +1,12 @@
+{
+    "name": "acf/some-block",
+    "title": "some-block",
+    "description": "some-block",
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["some block"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "acf-blocks/some-block/template/some-block.php"
+    }
+}
