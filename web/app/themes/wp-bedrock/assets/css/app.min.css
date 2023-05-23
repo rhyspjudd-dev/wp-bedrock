@@ -1,1 +1,1 @@
-.left-media-right-text{display:flex;flex-direction:row}.left-media-right-text .left-media{flex:0 0 50%}.left-media-right-text .left-media img{height:auto;max-width:100%}.left-media-right-text .right-text{flex:1;padding:0 20px}
+section{padding:30px}.posts__grid{grid-gap:2.4vw;display:grid;grid-template-columns:repeat(3,1fr)}.post-card{box-shadow:0 4px 12px rgba(0,0,0,.1);padding:20px}

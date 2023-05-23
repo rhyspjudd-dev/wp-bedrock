@@ -1,19 +1,22 @@
 
-.left-media-right-text {
-    display: flex;
-    flex-direction: row;
-}
+@import "global/variables";
 
-.left-media-right-text .left-media {
-    flex: 0 0 50%;
-}
+@import "global/global";
+// @import "global/reset";
+// @import "global/fonts";
+// @import "global/footer";
 
-.left-media-right-text .left-media img {
-    max-width: 100%;
-    height: auto;
-}
 
-.left-media-right-text .right-text {
-    flex: 1;
-    padding: 0 20px;
-}
+@import "grid/posts";
+
+// @import "templates/contact";
+
+// @import "components/form";
+// @import "components/btn";
+// @import "components/svg";
+// @import "components/toggle";
+// @import "components/social";
+// @import "components/inputs";
+// @import "components/breadcrumbs";
+// @import "components/accordion";
+@import "components/posts-card";
