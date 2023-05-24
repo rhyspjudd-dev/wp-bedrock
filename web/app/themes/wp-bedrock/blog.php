@@ -22,7 +22,6 @@ $args = array(
         while ($loop->have_posts()) {
             $loop->the_post(); ?>
             <div class="post-card">
-            <a href="<?php the_permalink(); ?>">
                 <?php if (has_post_thumbnail()) : ?>
                 <?php the_post_thumbnail('thumbnail'); ?>
                 <?php endif; ?>
@@ -30,7 +29,6 @@ $args = array(
                 <p class="post-card__category"><?php the_category(', '); ?></p>
                 <div class="post-card__excerpt"><?php the_excerpt(); ?></div>
                 <a class="post-card__button" href="<?php the_permalink(); ?>">Read More</a>
-            </a>
             </div>
     <?php }
     } else {

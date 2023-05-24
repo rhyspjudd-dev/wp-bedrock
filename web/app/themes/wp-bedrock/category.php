@@ -7,20 +7,20 @@ get_header();
 
 $category = get_queried_object();
 $category_slug = $category->slug;
+$category_title = single_cat_title('', false);
 
 $args = array(
     'category_name' => $category_slug,
     'posts_per_page' => -1 // Display all posts from the category
 );
 ?>
-
 <section class="posts">
+    <h1><?php echo $category_title ?></h1>
     <div class="posts__grid">
         <?php
         $custom_query = new WP_Query($args);
         if ($custom_query->have_posts()) {
             while ($custom_query->have_posts()) { ?>
-            
                 <div class="post-card">
                     <?php $custom_query->the_post(); ?>
                     <h2 class="post-card__title"><?php the_title(); ?></h2>

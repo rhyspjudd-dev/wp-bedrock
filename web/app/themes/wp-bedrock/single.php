@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+<section class="single">
+
 <?php
 if (have_posts()):
         while (have_posts()) : the_post();
@@ -7,5 +9,7 @@ if (have_posts()):
         endwhile;
 endif;
 ?>
+
+</section>
 
 <?php get_footer(); ?>
