@@ -7,5 +7,7 @@
     <style type="text/css" media="screen">@import url(<?php bloginfo('stylesheet_url'); ?>);</style>
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri().'/assets/css/app.min.css'?>"></link>
 </head>
-
 <body <?php body_class(); ?>>
+<?php include ('components/nav/desktop-nav.php'); ?>
+<main>
+

@@ -2,7 +2,7 @@
 @import "global/variables";
 
 @import "global/global";
-// @import "global/reset";
+@import "global/reset";
 @import "global/fonts";
 // @import "global/footer";
 
@@ -13,7 +13,7 @@
 
 // @import "components/form";
 // @import "components/btn";
-// @import "components/svg";
+@import "components/nav";
 // @import "components/toggle";
 // @import "components/social";
 // @import "components/inputs";

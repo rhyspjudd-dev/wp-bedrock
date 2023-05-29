@@ -1,18 +1,20 @@
 @font-face {
-    font-family: "MontserratRegular";
+    font-family: "Montserrat Regular";
     src: url("/fonts/Montserrat-Regular.woff2") format("woff2");
     unicode-range: U+0025-00FF;
+    font-display: swap;
 }
 @font-face {
-    font-family: "MontserratBold";
+    font-family: "Montserrat Bold";
     src: url("/fonts/Montserrat-Bold.woff2") format("woff2");
     unicode-range: U+0025-00FF;
+    font-display: swap;
 }
 
 body, p, a, li {
-    font-family: "MontserratRegular";
+    font-family: "Montserrat Regular";
 }
 
 h1, h2, h3, h4, h5 {
-    font-family: "MontserratBold";
+    font-family: "Montserrat Bold";
 }
