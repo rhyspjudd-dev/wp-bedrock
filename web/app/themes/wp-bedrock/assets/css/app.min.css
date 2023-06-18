@@ -1,1 +1,206 @@
-a{cursor:pointer}section{padding:30px}*,:after,:before{box-sizing:border-box}a,b,blockquote,body,canvas,caption,code,div,em,embed,fieldset,figure,footer,form,h1,h2,h3,h4,h5,h6,header,html,i,iframe,img,label,li,main,nav,object,ol,p,pre,small,span,strike,strong,sub,sup,table,tbody,td,tfoot,th,thead,tr,tt,u,ul,video{-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:none;-moz-text-size-adjust:none;text-size-adjust:none;border:0;font-size:100%;font:inherit;margin:0;padding:0;text-rendering:optimizeLegibility;vertical-align:baseline}footer,header,main,nav,section{display:block}body{line-height:1}a{text-decoration:none}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}table{border-collapse:collapse;border-spacing:0}input{-webkit-appearance:none;border-radius:0}@font-face{font-display:swap;font-family:Montserrat Regular;src:url(/fonts/Montserrat-Regular.woff2) format("woff2");unicode-range:u+0025-00ff}@font-face{font-display:swap;font-family:Montserrat Bold;src:url(/fonts/Montserrat-Bold.woff2) format("woff2");unicode-range:u+0025-00ff}a,body,li,p{font-family:Montserrat Regular}h1,h2,h3,h4,h5{font-family:Montserrat Bold}.posts__grid{grid-gap:2.4vw;display:grid;grid-template-columns:1fr}@media (min-width:576px){.posts__grid{grid-template-columns:repeat(2,1fr)}}@media (min-width:992px){.posts__grid{grid-template-columns:repeat(3,1fr)}}nav{box-shadow:0 4px 12px rgba(0,0,0,.1);display:grid;grid-template-columns:30% 50% 20%;height:10vh}nav ul.nav-items{align-items:center;display:flex;flex-wrap:wrap;grid-column:2;justify-content:space-between}nav ul.nav-items li{cursor:pointer}nav ul.nav-items .has-submenu{display:inline-grid;height:100%;place-content:center;position:relative}nav ul.nav-items .has-submenu:before{content:"";height:100%;left:-50%;position:absolute;width:50%}nav ul.nav-items .has-submenu:after{content:"";height:100%;position:absolute;right:-50%;width:50%;z-index:20}nav ul.nav-items .has-submenu:hover .nav-submenu{opacity:1;visibility:visible}nav ul.nav-items .has-submenu .nav-submenu{background:#fff;box-shadow:0 4px 12px rgba(0,0,0,.1);left:0;opacity:0;padding:30px 10px;position:absolute;top:10vh;transition:opacity .3s ease;visibility:hidden;width:-moz-max-content;width:max-content}nav a.nav__top-level{display:grid;grid-template-columns:auto 20px}nav .menu-item-has-children{align-items:center;display:flex;flex-wrap:wrap;justify-content:space-between}.post-card{box-shadow:0 4px 12px rgba(0,0,0,.1);padding:20px}
+a {
+  cursor: pointer;
+}
+
+section {
+  padding: 30px;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+          text-size-adjust: none;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+@font-face {
+  font-family: "Montserrat Regular";
+  src: url("/fonts/Montserrat-Regular.woff2") format("woff2");
+  unicode-range: U+0025-00FF;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat Bold";
+  src: url("/fonts/Montserrat-Bold.woff2") format("woff2");
+  unicode-range: U+0025-00FF;
+  font-display: swap;
+}
+body, p, a, li {
+  font-family: "Montserrat Regular";
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Montserrat Bold";
+}
+
+.posts__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2.4vw;
+}
+@media (min-width: 576px) {
+  .posts__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 992px) {
+  .posts__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+nav {
+  display: grid;
+  grid-template-columns: 30% 50% 20%;
+  height: 10vh;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  background: black;
+  position: relative;
+}
+nav ul.nav-items {
+  grid-column: 2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+nav ul.nav-items li {
+  cursor: pointer;
+}
+nav ul.nav-items li a {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+nav ul.nav-items .has-submenu {
+  position: relative;
+  height: 100%;
+  display: inline-grid;
+  place-content: center;
+}
+nav ul.nav-items .has-submenu::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 50%;
+  left: -10%;
+}
+nav ul.nav-items .has-submenu::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 50%;
+  right: -10%;
+  z-index: 20;
+}
+nav ul.nav-items .has-submenu:hover .nav-submenu {
+  opacity: 1;
+  visibility: visible;
+}
+nav ul.nav-items .has-submenu .nav-submenu {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  position: absolute;
+  top: 10vh;
+  left: 0;
+  width: -moz-max-content;
+  width: max-content;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  padding: 10px 20px;
+  background: black;
+}
+nav ul.nav-items .has-submenu .nav-submenu li {
+  line-height: 2.2em;
+}
+nav a.nav__top-level {
+  display: grid;
+  grid-template-columns: auto 20px;
+}
+nav .menu-item-has-children {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .icons {
+  padding: 1em 1em 1em 4em;
+  grid-column: 3;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .icons svg {
+  color: white;
+  height: 20px;
+  width: 20px;
+}
+nav .search-container {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.6s ease;
+}
+nav .search-container form.search-form {
+  position: absolute;
+  width: 100%;
+  padding: 1em;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 0.6s ease;
+}
+
+.post-card {
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}

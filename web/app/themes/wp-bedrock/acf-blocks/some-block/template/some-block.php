@@ -6,4 +6,8 @@
 $content = get_field('content');
 ?>
 
-<h1><?php echo $content ?></h1>
+<div class="some-block">
+
+  <h1><?php echo $content ?></h1>
+
+</div>

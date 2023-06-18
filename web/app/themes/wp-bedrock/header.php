@@ -8,6 +8,6 @@
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri().'/assets/css/app.min.css'?>"></link>
 </head>
 <body <?php body_class(); ?>>
-<?php include ('components/nav/desktop-nav.php'); ?>
+<?php include ('components/nav/lg-nav.php'); ?>
 <main>
 
