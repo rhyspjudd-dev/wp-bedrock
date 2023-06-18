@@ -49,25 +49,31 @@ function mukto_search_fetch(){
 <?php
 }
 
-// the ajax function
-add_action('wp_ajax_data_fetch' , 'data_fetch');
-add_action('wp_ajax_nopriv_data_fetch','data_fetch');
-function data_fetch(){
+add_action('wp_ajax_my_admin_ajax_action', 'my_admin_ajax_handler');
 
-    $the_query = new WP_Query( array( 'posts_per_page' => -1, 's' => esc_attr( $_POST['keyword'] ), 'post_type' => array('page','post') ) );
-    if( $the_query->have_posts() ) :
-        echo '<ul>';
-        while( $the_query->have_posts() ): $the_query->the_post(); ?>
-
-            <li><a href="<?php echo esc_url( post_permalink() ); ?>"><?php the_title();?></a></li>
-
-        <?php endwhile;
-       echo '</ul>';
-        wp_reset_postdata();  
-    endif;
-
-    die();
+function my_admin_ajax_handler() {
+    // Your AJAX handler code goes here
+    
+    // Example response
+    $response = array(
+        'message' => 'AJAX request successful',
+        'data' => $_POST, // Access the posted data
+    );
+    
+    wp_send_json_success($response); // Return a JSON response
 }
+
+
+function ajax_search_enqueues() {
+    if ( is_search() ) {
+    	wp_enqueue_script( 'ajax-search', get_stylesheet_directory_uri() . '/js/ajax-search.js', array( 'jquery' ), '1.0.0', true );
+        wp_localize_script( 'ajax-search', 'myAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
+
+    	wp_enqueue_style( 'ajax-search', get_stylesheet_directory_uri() . '/css/ajax-search.css' );
+    }
+}
+
+add_action( 'wp_enqueue_scripts', 'ajax_search_enqueues' );
 
 
 

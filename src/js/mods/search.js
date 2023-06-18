@@ -39,16 +39,45 @@ var searchmanager = {
       // Get the elements
       const searchIcon = document.querySelector('.search-ico');
       const searchContainer = document.querySelector('.search-container');
+      const searchField = document.querySelector('.search-field');
+      const closeSearch = document.querySelector('.close-search');
 
       // Add click event listener
       searchIcon.addEventListener('click', function() {
         // Toggle visibility of the search container
         if (searchContainer.style.display === 'none') {
+          searchContainer.classList.remove('fade-out');
           searchContainer.style.display = 'flex';
+          setTimeout(() => {
+            searchField.classList.add('expanded');
+          }, "250");
+          setTimeout(() => {
+            searchField.classList.add('expanded2x');
+          }, "750");
         } else {
           searchContainer.style.display = 'none';
+          searchField.classList.remove('expanded');
+          searchField.classList.remove('expanded2x');
         }
       });
+      closeSearch.addEventListener('click', function() {
+        // Toggle visibility of the search container
+        if (searchContainer.style.display === 'flex') {
+          setTimeout(() => {
+            searchField.classList.remove('expanded2x');
+          }, "250");
+          setTimeout(() => {
+            searchField.classList.remove('expanded2x');
+          }, "750");
+          setTimeout(() => {
+            searchContainer.classList.add('fade-out');
+          }, "1000");
+          setTimeout(() => {
+            searchContainer.style.display = 'none';
+          }, "1200");
+        }
+      });
+      
     }
 
 }

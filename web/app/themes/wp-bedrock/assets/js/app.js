@@ -107,14 +107,42 @@ var searchmanager = {
     // Get the elements
     var searchIcon = document.querySelector('.search-ico');
     var searchContainer = document.querySelector('.search-container');
+    var searchField = document.querySelector('.search-field');
+    var closeSearch = document.querySelector('.close-search');
 
     // Add click event listener
     searchIcon.addEventListener('click', function () {
       // Toggle visibility of the search container
       if (searchContainer.style.display === 'none') {
+        searchContainer.classList.remove('fade-out');
         searchContainer.style.display = 'flex';
+        setTimeout(function () {
+          searchField.classList.add('expanded');
+        }, "250");
+        setTimeout(function () {
+          searchField.classList.add('expanded2x');
+        }, "750");
       } else {
         searchContainer.style.display = 'none';
+        searchField.classList.remove('expanded');
+        searchField.classList.remove('expanded2x');
+      }
+    });
+    closeSearch.addEventListener('click', function () {
+      // Toggle visibility of the search container
+      if (searchContainer.style.display === 'flex') {
+        setTimeout(function () {
+          searchField.classList.remove('expanded2x');
+        }, "250");
+        setTimeout(function () {
+          searchField.classList.remove('expanded2x');
+        }, "750");
+        setTimeout(function () {
+          searchContainer.classList.add('fade-out');
+        }, "1000");
+        setTimeout(function () {
+          searchContainer.style.display = 'none';
+        }, "1200");
       }
     });
   }

@@ -174,10 +174,13 @@ nav .icons {
   grid-column: 3;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
 }
-nav .icons svg {
+nav .icons .icon-container {
+  margin: 0 10px;
+}
+nav .icons .icon-container svg {
   color: white;
   height: 20px;
   width: 20px;
@@ -191,13 +194,50 @@ nav .search-container {
   justify-content: center;
   align-items: center;
   transition: opacity 0.6s ease;
+  opacity: 1;
 }
 nav .search-container form.search-form {
   position: absolute;
   width: 100%;
   padding: 1em;
-  background: rgba(0, 0, 0, 0.7);
-  transition: opacity 0.6s ease;
+  background: rgba(0, 0, 0, 0.9);
+}
+nav .search-container form.search-form input {
+  width: 0%;
+  height: 35px;
+  border-radius: 20px;
+  padding: 0 10px;
+  transition: width 0.6s ease;
+}
+nav .search-container form.search-form button.search-submit {
+  background: transparent;
+  border: none;
+  outline: none;
+  position: absolute;
+  top: 25px;
+  cursor: pointer;
+}
+nav .search-container form.search-form .expanded {
+  width: 4%;
+  transition: width 0.6s ease;
+}
+nav .search-container form.search-form .expanded2x {
+  width: 60%;
+}
+nav .search-container .close-search {
+  position: absolute;
+  right: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+nav .search-container svg {
+  color: white;
+  height: 20px;
+  width: 20px;
+}
+
+.fade-out {
+  opacity: 0 !important;
 }
 
 .post-card {
